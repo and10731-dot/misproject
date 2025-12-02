@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume - Bradyn J. Anderson</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .resume-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 3px solid rgba(139, 90, 43, 0.5);
+      background: rgba(245, 230, 211, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border: 2px solid rgba(139, 90, 43, 0.3);
+    }
+    .resume-header h1 {
+      font-size: 2.5rem;
+      color: #3d2f1f;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+    }
+    .resume-header .contact-info {
+      color: #4a3828;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-top: 1rem;
+    }
+    .pdf-download {
+      margin-top: 2rem;
+    }
+    .pdf-download-btn {
+      display: inline-block;
+      padding: 0.875rem 2rem;
+      background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+      color: #f5e6d3;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(139, 90, 43, 0.4);
+      border: 2px solid rgba(107, 68, 35, 0.5);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    .pdf-download-btn:hover {
+      background: linear-gradient(135deg, #6b4423 0%, #5a3820 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(139, 90, 43, 0.5);
+    }
+    .resume-section {
+      margin-bottom: 2.5rem;
+    }
+    .resume-section h2 {
+      color: #3d2f1f;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid rgba(139, 90, 43, 0.6);
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+    }
+    .resume-section h3 {
+      color: #34495e;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .resume-section p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .experience-item, .education-item {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: rgba(245, 230, 211, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      border-left: 4px solid #8b5a2b;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      border: 2px solid rgba(139, 90, 43, 0.2);
+    }
+    .job-title, .degree {
+      font-weight: 700;
+      color: #3d2f1f;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .company, .school {
+      color: #4a3828;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .location-date {
+      color: #6b5a4a;
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .skill-tag {
+      background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+      color: #f5e6d3;
+      padding: 0.5rem 1.25rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(139, 90, 43, 0.3);
+      border: 1px solid rgba(107, 68, 35, 0.3);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+    .coursework-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .coursework-list li {
+      padding: 0.5rem 0;
+      color: #555;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .coursework-list li:last-child {
+      border-bottom: none;
+    }
+    .coursework-list li::before {
+      content: "▸ ";
+      color: #8b5a2b;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    @media print {
+      .site-header, .controls, .nav-toggle {
+        display: none;
+      }
+      body {
+        background: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="index.html">
+        <div>
+          <h1 class="brand-title">Bradyn J. Anderson</h1>
+          <div class="brand-sub">Professional Portfolio</div>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation" type="button">☰</button>
+      <nav id="siteNav" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="resume.html" aria-current="page">Resume</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="game.html">Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="resume-container">
+    <div class="resume-header">
+      <h1>Bradyn J. Anderson</h1>
+      <div class="contact-info">
+        <div>Duluth, Minnesota</div>
+        <div>715-531-3389</div>
+        <div><a href="mailto:AND10731@d.umn.edu">AND10731@d.umn.edu</a></div>
+      </div>
+      <div class="pdf-download">
+        <a href="resume.pdf" class="pdf-download-btn" download>Download PDF Resume</a>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>Professional Summary</h2>
+      <p>Detail-oriented Sales student with strong adaptive skills, experience in the Sales department, from the Bottom up shadowing great sales persons, and proficiency in Excel and more. Seeking to contribute to a dynamic Sales team.</p>
+    </div>
+
+    <div class="resume-section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <div class="degree">Bachelor of Professional Sales</div>
+        <div class="school">University of Minnesota Duluth</div>
+        <div class="location-date">Duluth, MN — September 2023 to May 2027</div>
+        <div style="margin-top: 1rem;">
+          <strong>GPA:</strong> 3.5
+        </div>
+        <div style="margin-top: 1rem;">
+          <strong>Relevant Coursework:</strong>
+          <ul class="coursework-list">
+            <li>Accounting</li>
+            <li>Statistics</li>
+            <li>Economics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>Experience</h2>
+      
+      <div class="experience-item">
+        <div class="job-title">Warehouse / Sales Shadow</div>
+        <div class="company">Ace Supply</div>
+        <div class="location-date">Moundsview, Minnesota — 2025</div>
+        <p>Warehouse and sales shadowing experience highlights adaptability, organizational skills, and a willingness to learn both operational and customer-facing aspects of a business.</p>
+        <p>Shadowing in warehouse and sales shows initiative, attention to detail, and an eagerness to gain hands-on knowledge of business operations.</p>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title">Bartender/Server</div>
+        <div class="company">Brick And Bourbon</div>
+        <div class="location-date">Stillwater, Minnesota — 2021 to 2025</div>
+        <p>Bartending and serving demonstrate strong customer service skills, multitasking ability, and effective communication in fast-paced environments.</p>
+        <p>Working as a bartender and server shows reliability, teamwork, and the ability to stay professional under pressure while providing excellent service.</p>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title">Construction Worker</div>
+        <div class="company">Demo Unlimited</div>
+        <div class="location-date">Twin Cities, Minnesota — 2023 to 2024</div>
+        <p>Commercial demolition experience highlights your strong work ethic, safety awareness, and ability to perform effectively on large, high-pressure projects.</p>
+        <p>It also highlights teamwork, reliability, and the ability to work efficiently under pressure on large-scale projects.</p>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span class="skill-tag">Leader</span>
+        <span class="skill-tag">Creative</span>
+        <span class="skill-tag">Logical</span>
+        <span class="skill-tag">Problem Solver</span>
+        <span class="skill-tag">Organized</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Background Music Button -->
+  <button id="musicControl" type="button" style="position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, rgba(139, 90, 43, 0.95) 0%, rgba(107, 68, 35, 0.95) 100%); border: 4px solid rgba(139, 90, 43, 0.8); color: #f5e6d3; font-size: 2rem; cursor: pointer; z-index: 999999; box-shadow: 0 8px 24px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; font-weight: bold; opacity: 1; pointer-events: auto; user-select: none; outline: none; margin: 0; padding: 0;" title="Click to play background music">🔇</button>
+  <audio id="backgroundMusic" loop preload="auto" style="display: none;"><source src="files/background-music.mp3" type="audio/mpeg"></audio>
+  
+  <script src="js/main.js"></script>
+  <script src="js/background-music.js"></script>
+</body>
+</html>
+
